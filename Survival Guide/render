@@ -1,0 +1,7 @@
+
+pandoc "Survival Guide.md" -o "Survival Guide.pdf" --latex-engine=xelatex --template=eisvogel --listings --highlight-style=tango -N
+pdftk Survival\ Guide.pdf cat 2-r2 output Survival\ Guide\ no\ cover.pdf
+pdfunite Survival-Guide-cover.pdf Survival\ Guide\ no\ cover.pdf ../cheatsheet.pdf "Guia de Sobrevivência - help MATLAB.pdf"
+
+rm "Survival Guide.pdf" "Survival Guide no cover.pdf"
+ 
