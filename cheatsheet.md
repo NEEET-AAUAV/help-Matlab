@@ -11,7 +11,23 @@ header-includes:
 	- \geometry{a4paper, total={170mm,257mm}, left=8mm, top=6mm, bottom=6mm, right=8mm}
 ...
 
+\fancypagestyle{companypagestyle}
+{
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[R]
+{
+\raggedleft
+\includegraphics[width=\linewidth,height=50pt,keepaspectratio]{Logos/logo_aauav.png}
+\hspace{-2cm}
+\includegraphics[width=\linewidth,height=50pt,keepaspectratio]{Logos/logo_neeet.png}
+}
+}
+
+
+
 \pagestyle{empty}
+\pagestyle{companypagestyle}
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt plus 0.5ex}
@@ -28,8 +44,6 @@ header-includes:
 }
 
 \lstset{basicstyle=\scriptsize,style=cmdLine}
-
-
 \twocolumn 
 
 # Ajuda
